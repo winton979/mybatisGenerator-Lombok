@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<properties resource="mapperdbconfig.properties" />
+	<classPathEntry
+		location="D:\.m2\mysql\mysql-connector-java\5.1.22\mysql-connector-java-5.1.22.jar" />
+	<context id="context1">
+		<!-- 指定字符串 -->
+		<property name="javaFileEncoding" value="UTF-8"/>
+		<!-- 自定义lombok格式 -->
+		<plugin type="org.mybatis.generator.plugins.LombokPlugin" />
+		<commentGenerator>
+			<!-- 关闭自动生成的注释 -->
+			<property name="dateFormat" value="yyyy-MM-dd"/>
+			<property name="addRemarkComments" value="true" />
+		</commentGenerator>
+		<!-- <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/> 
+			<plugin type="org.mybatis.generator.plugins.SerializablePlugin"/> <plugin 
+			type="org.mybatis.generator.plugins.ToStringPlugin" /> -->
+		<jdbcConnection connectionURL="${db.url}" driverClass="${db.driver}"
+			password="${db.password}" userId="${db.username}" />
+		<javaModelGenerator targetPackage="com.themis.userinfo.entity"
+			targetProject="nymph-core" />
+		<sqlMapGenerator targetPackage="com.themis.userinfo.mapper"
+			targetProject="nymph-Themis" />
+		<javaClientGenerator targetPackage="com.themis.userinfo.dao"
+			targetProject="nymph-core" type="XMLMAPPER" />
+		<table tableName="user_info" domainObjectName="UserInfo"></table>
+	</context>
+</generatorConfiguration>
