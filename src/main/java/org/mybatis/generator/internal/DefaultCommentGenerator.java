@@ -165,9 +165,9 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		javaElement.addJavaDocLine(" *"); //$NON-NLS-1$
 		StringBuilder sb = new StringBuilder();
 		sb.append(" * "); //$NON-NLS-1$
-		sb.append(MergeConstants.NEW_ELEMENT_TAG);
+		//sb.append(MergeConstants.NEW_ELEMENT_TAG);
 		if (markAsDoNotDelete) {
-			sb.append(" do_not_delete_during_merge"); //$NON-NLS-1$
+			sb.append(" do not delete "); //$NON-NLS-1$
 		}
 		String s = getDateString();
 		if (s != null) {
@@ -210,7 +210,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		innerClass.addJavaDocLine("/**"); //$NON-NLS-1$
-		innerClass.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//innerClass.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator database table "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -249,7 +249,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		}
 		topLevelClass.addJavaDocLine(" *"); //$NON-NLS-1$
 
-		topLevelClass.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//topLevelClass.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator database table "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -276,7 +276,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		innerEnum.addJavaDocLine("/**"); //$NON-NLS-1$
-		innerEnum.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//innerEnum.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" *Auto Generator database table "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -345,7 +345,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		field.addJavaDocLine("/**"); //$NON-NLS-1$
-		field.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//field.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator database table "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -372,7 +372,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		method.addJavaDocLine("/**"); //$NON-NLS-1$
-		method.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//method.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator database table "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -401,7 +401,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		method.addJavaDocLine("/**"); //$NON-NLS-1$
-		method.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//method.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator database column "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -441,7 +441,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		method.addJavaDocLine("/**"); //$NON-NLS-1$
-		method.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//method.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator column "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());
@@ -482,7 +482,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		StringBuilder sb = new StringBuilder();
 
 		innerClass.addJavaDocLine("/**"); //$NON-NLS-1$
-		innerClass.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
+		//innerClass.addJavaDocLine(" * Auto Generator."); //$NON-NLS-1$
 
 		sb.append(" * Auto Generator database table "); //$NON-NLS-1$
 		sb.append(introspectedTable.getFullyQualifiedTable());

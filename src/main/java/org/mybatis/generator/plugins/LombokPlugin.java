@@ -11,7 +11,8 @@ import org.mybatis.generator.api.dom.java.Method;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 
 /**
- * 重写
+ * @author winton
+ * @since 2017-9-26
  */
 public class LombokPlugin extends PluginAdapter {
 	
@@ -29,6 +30,10 @@ public class LombokPlugin extends PluginAdapter {
 		// 添加lombok注解
 		topLevelClass.addAnnotation("@Data");
 		topLevelClass.addImportedType("lombok.Data");
+		
+		topLevelClass.addAnnotation("@Builder");
+		topLevelClass.addImportedType("lombok.Builder");
+		
 		// 添加实现序列化接口
 		topLevelClass.addSuperInterface(FULLYQUALIFIEDJAVATYPE);
         return true;
